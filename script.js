@@ -21,7 +21,15 @@ function sortStrings(){
     let sortArrayString = arrayString.sort();
     answerStrings.innerHTML = sortArrayString;
 };
-function sortNumbers(){};
+function sortNumbers(){
+    let numbersValue = num.value;
+    let numbersArray = numbersValue.split(",");
+
+    for (var i = 0; i < numbersArray.length; i++) {
+        numbersArray[i] = Number(numbersArray[i]);
+    }
+    answerNum.innerHTML = numbersArray.sort();
+};
 function sortObjects(){};
 
 //Event listeners
